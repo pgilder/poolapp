@@ -1,0 +1,3 @@
+.btn:not(.btn-raised).btn-success, .input-group-btn .btn:not(.btn-raised).btn-success {
+    color: #fff;
+}

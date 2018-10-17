@@ -1,0 +1,33 @@
+<template name="signup">
+      {{> navbar}}
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <h3 class="page-header">Create An Account</h3>
+            <p>Get your bad credit removed with one simple system. Create a CreditBee Profile today to create custom letters at the speed of light!</p>
+            <form id="application-signup" class="signup">
+              <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <input type="email" name="emailAddress" class="form-control" placeholder="Email Address">
+              </div> <!-- end .form-group -->
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+              </div> <!-- end .form-group -->
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="name" name="name" class="form-control" placeholder="John Doe">
+              </div> <!-- end .form-group -->
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="phone" name="phone" class="form-control" placeholder="***-***-****">
+              </div> <!-- end .form-group -->
+              <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Sign Up">
+              </div> <!-- end .form-group -->
+            </form>
+            <p>Already have an account? <a href="{{pathFor 'login'}}">Log In</a>.</p>
+          </div> <!-- end .col-xs-12 -->
+        </div> <!-- end .row -->
+      </div>
+</template>

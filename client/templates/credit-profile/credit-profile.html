@@ -1,0 +1,51 @@
+<template name="creditProfile">
+  {{> navbar}}
+  <div class="container">
+  {{> breadcrumb}}
+    <h3 align="center">Edit Credit Items</h3>
+  {{> creditlist}}
+  {{> creditnav}}
+  {{>horizontalfab}}
+
+</div>
+</template>
+
+
+<template name="creditlist">
+  <div class="list-group animated fadeInRight">
+    {{#each credititem}}
+
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <i class="material-icons">{{icon}}</i>
+        </div>
+        <div class="row-content">
+          <div class="least-content">{{creditorbalance}}</div>
+          <h4 class="list-group-item-heading">{{creditorname}}</h4>
+
+          <p class="list-group-item-text">Updated {{reportdate}}   <span class="label label-primary">{{creditorstatus}}</span> </p>
+        </div>
+      </div>
+          <li class="{{#if checked}}checked{{/if}}">
+            <button class="delete delete-btn"><i class="material-icons more-icon credit-delete">delete_forever</i></button>
+
+            <!--<input type="checkbox" checked="{{checked}}" class="toggle-checked" /> -->
+
+            <span class="text"></span>
+          </li>
+
+      <div class="list-group-separator"></div>
+    {{/each}}
+  </div>
+</template>
+
+
+<template name="deleteitems">
+  <li class="{{#if checked}}checked{{/if}} more-icon">
+    <button class="delete"><i class="material-icons more-icon">cancel</i></button>
+
+    <!-- <input type="checkbox" checked="{{checked}}" class="toggle-checked" /> -->
+
+    <span class="text"></span>
+  </li>
+</template>

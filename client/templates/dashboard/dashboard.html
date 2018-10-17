@@ -1,0 +1,402 @@
+<template name="dashboard">
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+    	<div class="sidebar-wrapper animated rotateInDownLeft">
+            <div class="logo">
+                <a style="color: #fff;" href="/" class="simple-text navbar-brand logo">
+                    CreditBee
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="/">
+                        <i class="material-icons more-icon sidebar-icons">cancel</i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="/dashboard">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/profile">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/additem">
+                        <i class="pe-7s-note2"></i>
+                        <p>Add New Item</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/creditProfile">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Edit Credit Items</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/settings">
+                        <i class="pe-7s-science"></i>
+                        <p>Settings</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/edit-profile">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Edit My Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/messages">
+                        <i class="pe-7s-bell"></i>
+                        <p>Messages</p>
+                    </a>
+                </li>
+				<li class="active-pro">
+                    <a href="/additem">
+                        <i class="pe-7s-rocket"></i>
+                        <p>Create A New Letter</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Add<b class="caret"></b></a>
+                              <ul class="dropdown-menu">
+                                <li>{{>additemsingle}}</li>
+                              </ul>
+                              <ul class="dropdown-menu">
+                                <li>{{>additemsingle}}</li>
+                              </ul>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                      <li>{{> loginButtons}}</li>
+                      <li><a href="/dashboard">Dashboard</a></li>
+                      <li><a href="/additem">Add New Item</a></li>
+                      <li><a href="/creditProfile">Edit Items</a></li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    My Account
+                                    <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+
+                                <li><a href="/profile">View Profile</a></li>
+                                <li><a href="/edit-profile">Edit Profile</a></li>
+                                <li><a href="/settings">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/reset-password">Reset Password</a></li>
+                                <li><a href="/recover-password">Recover Password</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 animated fadeInUp">
+                      <div class="card card-user">
+                            <div class="image">
+                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+                            </div>
+                          <div class="content">
+                              <div class="author">
+                                   <a href="#">
+                                  {{#if photo}}<img class="avatar border-gray" src="{{photo}}" alt="..."/>{{/if}}
+
+                                    <h4 class="title">Patrick Gilder<br />
+                                       <small>pgilder@designdelegate.co</small>
+                                    </h4>
+                                  </a>
+                              </div>
+                            <!--  <p class="description text-center"> "Lamborghini Mercy <br>
+                                                  Your chick she so thirsty <br>
+                                                  I'm in that two seat Lambo"
+                              </p>-->
+                          </div>
+                          <hr>
+                          <div class="text-center">
+                              <button href="#" class="btn btn-simple"><i class="material-icons more-icon">library_add</i></button>
+                              <button href="#" class="btn btn-simple"><i class="material-icons more-icon">add_a_photo</i></button>
+                              <button href="#" class="btn btn-simple"><i class="material-icons more-icon">library_books</i></button>
+
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-8 animated fadeInRight">
+                      <div class="card ">
+                          <div class="header">
+                              <h4 class="title">Your Credit Scores</h4>
+                              <p class="category">See details that can impact your score.</p>
+                          </div>
+                          <div class="content">
+                              <div id="chartActivity" class="ct-chart">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <img src="img/TransUnion.png" height="20px" style="margin-left: 38%; padding-bottom:5px;" alt=""><br/>
+                                    <img src="img/score1.png" style="margin-left: 25%;" alt="">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <img src="img/Experian.png" height="20px" style="margin-left: 41%; padding-bottom:5px;"  alt=""><br/>
+                                    <img src="img/score2.png" style="margin-left: 25%;" alt="">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <img src="img/Equifax.png" height="20px" style="margin-left: 37%; padding-bottom:5px;"  alt=""><br/>
+                                    <img src="img/score3.png" style="margin-left: 25%;" alt="">
+                                  </div>
+                                </div>
+                                {{> simplechart}}
+                              </div>
+
+                              <div class="footer">
+                                <!--  <div class="legend">
+                                      <i class="fa fa-circle text-info"></i> Recent Credit Agency Scores
+                                      <i class="fa fa-circle text-danger"></i> BMW 5 Series
+                                  </div>
+                                  <hr> -->
+                                  <div class="stats">
+                                      <i class="fa fa-check"></i> Data information certified
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-7 animated fadeInUp">
+                      <div class="card ">
+                          <div class="header">
+                              <h4 class="title">Recent Credit Items</h4>
+                              <p class="category">Lastest Activity</p>
+                          </div>
+                          <div class="content">
+                              <div class="table-full-width">
+                                  <table class="table">
+                                      <tbody>
+                                        {{#each credititem}}
+                                          <tr>
+                                              <td>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="" data-toggle="checkbox">
+                                                  </label>
+                                              </td>
+                                              <td><a href="{{pathFor 'creditProfile'}}">{{creditorname}}</a> - Account: <u>{{creditoraccountnumber}}</u> was removed from   <img class="agency-img" src="img/{{creditoragency}}.png" height="30px" alt=""></td>
+                                              <td class="td-actions text-right">
+                                                  <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                      <i class="fa fa-edit"></i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                      <i class="fa fa-times"></i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          {{/each}}
+                                        <!--  <tr>
+                                              <td>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="" data-toggle="checkbox" checked="">
+                                                  </label>
+                                              </td>
+                                              <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                              <td class="td-actions text-right">
+                                                  <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                      <i class="fa fa-edit"></i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                      <i class="fa fa-times"></i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="" data-toggle="checkbox" checked="">
+                                                  </label>
+                                              </td>
+                                              <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+</td>
+                                              <td class="td-actions text-right">
+                                                  <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                      <i class="fa fa-edit"></i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                      <i class="fa fa-times"></i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="" data-toggle="checkbox">
+                                                  </label>
+                                              </td>
+                                              <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                              <td class="td-actions text-right">
+                                                  <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                      <i class="fa fa-edit"></i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                      <i class="fa fa-times"></i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="" data-toggle="checkbox">
+                                                  </label>
+                                              </td>
+                                              <td>Read "Following makes Medium better"</td>
+                                              <td class="td-actions text-right">
+                                                  <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                      <i class="fa fa-edit"></i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                      <i class="fa fa-times"></i>
+                                                  </button>
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="" data-toggle="checkbox">
+                                                  </label>
+                                              </td>
+                                              <td>Unfollow 5 enemies from twitter</td>
+                                              <td class="td-actions text-right">
+                                                  <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                      <i class="fa fa-edit"></i>
+                                                  </button>
+                                                  <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                      <i class="fa fa-times"></i>
+                                                  </button>
+                                              </td>
+                                          </tr> -->
+                                      </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="footer">
+                                  <hr>
+                                  <div class="stats">
+                                      <i class="fa fa-history"></i> Updated 3 minutes ago
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5 animated fadeInRight">
+                      <div class="card">
+                          <div class="header">
+                              <h4 class="title">Recent Submissions</h4>
+                              <p class="category">Recent Activity on your account</p>
+                          </div>
+                          <div class="content">
+                            <div class="col-md-12">
+                            {{> charts}}
+                            </div>
+                              <div class="footer">
+                                  <!--<div class="legend">
+                                      <i class="fa fa-circle text-info"></i> Open
+                                      <i class="fa fa-circle text-danger"></i> Click
+                                      <i class="fa fa-circle text-warning"></i> Click Second Time
+                                  </div> -->
+                                  <hr>
+                                  <div class="stats">
+                                      <i class="fa fa-history"></i> Updated 3 minutes ago
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</div>
+</template>

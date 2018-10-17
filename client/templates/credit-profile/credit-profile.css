@@ -1,0 +1,14 @@
+.pager, ul, li {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: left;
+    list-style: none;
+}
+
+.delete-btn {
+  float: left;
+}
+
+.credit-delete{
+    float: left;
+}

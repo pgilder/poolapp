@@ -1,0 +1,39 @@
+.navbar-default .navbar-nav>li>a {
+    color: #525051;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar, .navbar.navbar-default {
+    background-color: #ffffff;
+    color: #3ddb93;
+}
+
+.navbar-default .navbar-brand {
+    color: #3ddb93 !important;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+
+@media (max-width: 414px) {
+.navbar .navbar-brand {
+    height: 50px;
+    padding: 10px 15px;
+    padding-left: 37% !important;
+}
+}
+
+
+.bee{
+  height: 20px;
+
+}
+
+.logo-block {
+  display: inline;
+  position: relative;
+}

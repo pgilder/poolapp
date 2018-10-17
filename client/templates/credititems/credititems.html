@@ -1,0 +1,58 @@
+<template name="credititems">
+{{> breadcrumb}}
+  <h3 align="center">Credit Items</h3>
+{{> listgroup}}
+{{> creditnav}}
+</template>
+
+
+<template name="breadcrumb">
+  <ul class="breadcrumb">
+    <li><a href="javascript:void(0)">Patrick Gilder's</a></li>
+    <li class="active">Credit Items</li>
+  </ul>
+</template>
+<template name="panel">
+  <div class="panel panel-default">
+  <div class="panel-body">
+    Basic panel
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    Panel content
+  </div>
+  <div class="panel-footer">Panel footer</div>
+</div>
+</template>
+
+<template name="listgroup">
+  <div class="list-group animated fadeInRight">
+    {{#each credititem}}
+
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <i class="material-icons">{{icon}}</i>
+        </div>
+        <div class="row-content">
+          <div class="least-content">{{creditorbalance}}</div>
+          <h4 class="list-group-item-heading">{{creditorname}}</h4>
+
+          <p class="list-group-item-text">Updated {{reportdate}}   <span class="label label-primary">{{creditorstatus}}</span> </p>
+          <!--<a href="/creditlist/{{this._id}}">link with many parameters</a> -->
+        </div>
+      </div>
+        <!--  <i class="material-icons more-icon">chevron_right</i> -->
+
+      <div class="list-group-separator"></div>
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,10 @@
+Lite Green = #3ddb93
+Logo Green = #3edb94
+Brand Green = #2cdfa6
+Brand Red = #ff2e73
+Off Red = #ff7a75
+Brand Grey = #525051
+Brand Orange = #ff863a
+Brand Blue = #31bffd
+CTA Blue = #1079ff
+Yellow = #ffe24e
