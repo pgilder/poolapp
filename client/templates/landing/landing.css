@@ -5,7 +5,7 @@
 
 .landing-image{
   margin-top: 50px;
-  max-width: 700px;
+  max-width: 200px;
 }
 
 #articles {
@@ -25,9 +25,7 @@
     position: fixed;
     z-index: -1;
     background: #ffc800;
-    background: -moz-linear-gradient(45deg,#ffc800 0,#c400bb 75%,#9423c9 100%);
-    background: -webkit-linear-gradient(45deg,#ffc800 0,#c400bb 75%,#9423c9 100%);
-    background: linear-gradient(45deg,#ffc800 0,#c400bb 75%,#9423c9 100%);
+    background-image: url(/img/pool1.jpg);
 }
 
 a.landingcta {
@@ -36,4 +34,47 @@ a.landingcta {
     padding: 21px 40px;
     border-radius: 30px;
     margin-left: 30%;
+}
+
+.menubar {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 82px;
+    margin: 0 auto;
+    width: 100vw;
+}
+
+ul.nav.nav-pills.nav-pills-icons {
+    margin: 0 auto;
+    display: table;
+}
+
+
+@media screen and (max-width: 990)  {
+.contentArea {
+    position: absolute;
+    bottom: 83px;
+    top: 62px;
+}
+.menubar li.nav-item {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+}
+
+.contentArea {
+    position: absolute;
+    bottom: 82px;
+    top: 61px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+}
+
+.menubar li.nav-item {
+    text-align: -webkit-center;
+    margin: 10px 7vw;
 }

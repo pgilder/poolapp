@@ -9,12 +9,12 @@
 
 .navbar, .navbar.navbar-default {
     background-color: #ffffff;
-    color: #3ddb93;
+    color: #73c4ef;
 }
 
 .navbar-default .navbar-brand {
-    color: #3ddb93 !important;
-    font-family: 'Dancing Script', cursive;
+    color: #73c4ef !important;
+    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
     font-size: 30px;
 }
 
@@ -36,4 +36,19 @@
 .logo-block {
   display: inline;
   position: relative;
+}
+
+
+@media (min-width: 768px) {
+.navbar {
+    border-radius: 0px !important;
+}
+}
+
+
+.bs-component {
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  right: 0px;
 }

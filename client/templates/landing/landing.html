@@ -1,19 +1,70 @@
 
 <template name="landing">
     {{> navbar}}
-    <div class="container-fluid bg-gradient">
-      <div class="landing-content">
-        <div id="hero">
-		        <div id="hero-bg"></div>
-		          <div id="articles" class="floating s articlesElm" style="opacity: 1; transform: translate(6.65714px, -3.55px);">
-			             <div class="element wide">
-				              <div class="outer-column">
-                        <img class="landing-image" src="img/home.png" alt=""><br/>
-                        <a class="landingcta" href="/signup">Create An Account <i class="material-icons">person_add</i></a>
-				              </div>
-			             </div>
-		         </div>
-	     </div>
+{{#if currentUser}}
+  <div class="contentArea">
+    <div class="col-lg-6 col-md-8">
+      <div class="tab-content tab-space">
+          <div class="tab-pane active show" id="dashboard-1">
+            <div class="container-fluid bg-gradient">
+              <div class="landing-content">
+                <div id="hero">
+        		        <div id="hero-bg"></div>
+        		          <div id="articles" class="floating s articlesElm" style="opacity: 1; transform: translate(6.65714px, -3.55px);">
+                        <h1>Hello World!</h1>
+        		         </div>
+        	     </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="schedule-1">
+            Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+            <br><br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+            <div class="element wide">
+               <div class="outer-column">
+                 <img class="landing-image" src="img/home.png" alt=""><br/>
+                 <a class="landingcta" href="/signup">Create An Account <i class="material-icons">person_add</i></a>
+
+               </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tasks-1">
+              Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+              <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+          </div>
       </div>
     </div>
+      <div class="menubar">
+        <ul class="nav nav-pills nav-pills-icons" role="tablist">
+            <!--
+                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+            -->
+            <li class="nav-item">
+                <a class="nav-link active show" href="#dashboard-1" role="tab" data-toggle="tab" aria-selected="true">
+                    <i class="material-icons">dashboard</i>
+                    <div class="hidden-xs ">
+                      Dashboard
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#schedule-1" role="tab" data-toggle="tab" aria-selected="false">
+                    <i class="material-icons">waves</i>
+                    <div class="hidden-xs ">
+                      Pools
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab" aria-selected="false">
+                    <i class="material-icons">supervisor_account</i>
+                    <div class="hidden-xs ">
+                      Accounts
+                    </div>
+                </a>
+            </li>
+        </ul>
+      </div>
+  </div>
+{{/if}}
 </template>

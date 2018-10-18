@@ -3442,7 +3442,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 
 a.simple-text.navbar-brand.logo {
     color: #fff !important;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
 }
 
 a.simple-text.navbar-brand.logo {
@@ -3489,4 +3489,11 @@ a.simple-text.navbar-brand.logo {
 
 button.btn.btn-danger.btn-simple.btn-xs {
     color: #fff !important;
+}
+
+
+.collapse.navbar-collapse {
+    position: absolute;
+    left: 110px;
+    top: -17px;
 }

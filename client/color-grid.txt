@@ -1,4 +1,4 @@
-Lite Green = #3ddb93
+Lite Green = #73c4ef
 Logo Green = #3edb94
 Brand Green = #2cdfa6
 Brand Red = #ff2e73

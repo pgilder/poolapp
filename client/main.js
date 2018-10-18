@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import "@material/top-app-bar/mdc-top-app-bar";
 
 import './main.html';
 
